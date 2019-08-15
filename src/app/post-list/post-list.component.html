@@ -1,5 +1,6 @@
-<app-post-list-item *ngFor="let objPost of posts"
+<app-post-list-item *ngFor="let objPost of posts; let i = index"
                     [titlePost]="objPost.title"
                     [textPost]="objPost.content"
                     [datePost]="objPost.created_at | date: 'M/d/yyyy, h:mm a'"
-                    [loveIts] = "objPost.loveIts"></app-post-list-item>
+                    [loveIts] = "objPost.loveIts"
+                    [index]="i"></app-post-list-item>
