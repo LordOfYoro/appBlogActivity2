@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col-sm-8 col-sm-offset-2">
+    <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+      <div class="form-group">
+        <label for="namePost">
+          Nom du post
+        </label>
+        <input type="text" name="namePost" id="namePost" class="form-control" ngModel required>
+      </div>
+      <div class="form-group">
+        <label for="contentPost">
+          Contenu du post
+        </label>
+        <textarea class="form-control rounded-0" name="contentPost" id="contentPost" rows="10" ngModel required></textarea>
+      </div>
+      <button class="btn btn-primary" type="submit" [disabled]="f.invalid">Enregistrer</button>
+    </form>
+  </div>
+</div>
