@@ -1,0 +1,5 @@
+<app-post-list-item *ngFor="let objPost of posts"
+                    [titlePost]="objPost.title"
+                    [textPost]="objPost.content"
+                    [datePost]="objPost.created_at | date: 'M/d/yyyy, h:mm a'"
+                    [loveIts] = "objPost.loveIts"></app-post-list-item>
